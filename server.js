@@ -10,11 +10,14 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost/dbName";
+const options = {
   useNewUrlParser: true,
+  useCreateIndex: true,
   useFindAndModify: false,
-  useUnifiedTopology: true
-});
+  family: 4 // Use IPv4, skip trying IPv6
+};
+mongoose.connect(MONGODB_URI,options)
 
 // routes
 app.use(require("./routes/api.js"));
