@@ -9,3 +9,4 @@ This app was created using HTML, CSS, JavaScript, Charts.js, Express.js, and Mon
 This was a great project where we initially learned Express and Mongo. 
 Initially difficult but eventually became one of my favorite little projects learning this technology.
 
+![Alt text](/workout.PNG?raw=true "Screen Shot")
